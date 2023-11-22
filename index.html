@@ -9,22 +9,157 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
 
     <script defer type="module" src="main.js"></script>
 </head>
 
 <body>
-    <header class="header">Header</header>
-    <section class="search section">Search</section>
+    <header class="header grid grid--2-columns">
+        <div class="logo">Holidays App</div>
+        <nav>
+            <ul class="nav flex flex--row">
+                <li><a href="#" class="nav__link">First Moment 2024</a></li>
+                <li><a href="#" class="nav__link">Last Moment</a></li>
+                <li><a href="#" class="nav__link">Exotic</a></li>
+                <li><a href="#" class="nav__link">Family</a></li>
+                <li><a href="#" class="nav__link">Sightseeing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="search">
+        <div class="search__wrapper section">
+            <div class="search__wrapper__text">
+            <h1>A carefree holiday <br>for over 100 years</h1>
+            <p>With Holidays App carefree on the road around the world for more than 100 years</p>
+        </div>
+            <div class="search__form flex flex-row">
+                <select class="search__country" name="search-country">
+                    <option value="" selected>Where to?</option>
+                    <option>Egypt</option>
+                    <option>Oman</option>
+                    <option>Turkey</option>
+                    <option>UAE</option>
+                </select>
+                <button class="button button--primary">Search</button>
+            </div>
+        </div>
+    </section>
+
     <main class="results section">Results</main>
 
-    <section class="offers section">Top Offers</section>
-    <section class="destinations section">Popular Destinations</section>
-    <section class="newsletter section">Newsletter</section>
+    <section class="offers section">
+        <h5 class="section__heading">Top Offers</h5>
 
-    <footer class="footer">Footer</footer>
+        <div class="offers__container grid grid--4-columns"></div>
+    </section>
+
+    <section class="destinations section">
+        <h5 class="section__heading">Popular Destinations</h5>
+
+        <div class="destinations__container grid grid--2-columns">
+
+            <div class="destination card clickable">
+                <img class="destination__image" src="src/img/destinations/egypt/egypt.jpg" alt="Hotel in Egypt.">
+
+                <div class="destination__text flex flex--column">
+                    <h1 class="destination__name">Egypt</h1>
+                    <h6 class="destination__price">from &euro; 720</h6>
+                </div>
+            </div>
+
+            <div class="destination card clickable">
+                <img class="destination__image" src="src/img/destinations/oman/oman.jpg" alt="Hotel in Oman.">
+
+                <div class="destination__text flex flex--column">
+                    <h1 class="destination__name">Oman</h1>
+                    <h6 class="destination__price">from &euro; 1390</h6>
+                </div>
+            </div>
+
+            <div class="destination card clickable">
+                <img class="destination__image" src="src/img/destinations/uae/uae.jpg" alt="Hotel in UAE.">
+
+                <div class="destination__text flex flex--column">
+                    <h1 class="destination__name">UAE</h1>
+                    <h6 class="destination__price">from &euro; 990</h6>
+                </div>
+            </div>
+
+            <div class="destination card clickable">
+                <img class="destination__image" src="src/img/destinations/turkey/turkey.jpg" alt="Hotel in UAE.">
+
+                <div class="destination__text flex flex--column">
+                    <h1 class="destination__name">Turkey</h1>
+                    <h6 class="destination__price">from &euro; 490</h6>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="newsletter ">
+        <div class="section newsletter__wrapper">
+            <h2>Save time, save money!</h2>
+            <p>Subscribe, and we will send you the best deals!</p>
+            <div class="newsletter__form flex flex--row flex--justify-content-center">
+                <input type="email" name="email" id="email" placeholder="Your email address">
+                <button class="button button--primary">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="section flex flex--row">
+            <div>
+                <p>Company</p>
+                <ul>
+                    <li>lorem</li>
+                    <li>ipsum</li>
+                    <li>dolor</li>
+                    <li>nobis</li>
+                    <li>adipisicing</li>
+                </ul>
+            </div>
+            <div>
+                <p>Services</p>
+                <ul>
+                    <li>Facere</li>
+                    <li>nobis</li>
+                    <li>quibusdam</li>
+                    <li>aperiam</li>
+                    <li>architecto</li>
+                </ul>
+            </div>
+            <div>
+                <p>Clients</p>
+                <ul>
+                    <li>dolore</li>
+                    <li>vitae</li>
+                    <li>dolores</li>
+                    <li>quibusdam</li>
+                    <li>architecto</li>
+                </ul>
+            </div>
+            <div>
+                <p>Partners</p>
+                <ul>
+                    <li>consectetur</li>
+                    <li>Item</li>
+                    <li>vitae</li>
+                    <li>architecto</li>
+                    <li>dolores</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <div class="copyright">Copyright &copy; 2023 Holidays App</div>
+
 </body>
 
 </html>

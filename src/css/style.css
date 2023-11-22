@@ -1,6 +1,21 @@
 /* Configuration */
 
 :root {
+    --text-size-h1: 2.986rem;
+    --text-size-h2: 2.488rem;
+    --text-size-h3: 2.074rem;
+    --text-size-h4: 1.728rem;
+    --text-size-h5: 1.44rem;
+    --text-size-h6: 1.2rem;
+    --text-size-p: 1rem;
+    --text-size-small: 0.625rem;
+
+    --color-primary-light: #818cf8;
+    --color-primary: #4f46e5;
+    --color-primary-dark: #3730a3;
+
+    --shadow-color: #d1d5db;
+    --border-color: #e5e7eb; /*#f3f4f6;*/
 
     --text-color-default: #1f2937;
     --text-color-light: #6b7280;
@@ -20,10 +35,370 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-size: var(--text-size-p);
+
     color: var(--text-color-default);
+}
+
+/* HTML Elements */
+
+h1 {
+    font-size: var(--text-size-h1);
+}
+
+h2 {
+    font-size: var(--text-size-h2);
+}
+
+h3 {
+    font-size: var(--text-size-h3);
+}
+
+h4 {
+    font-size: var(--text-size-h4);
+}
+
+h5 {
+    font-size: var(--text-size-h5);
+}
+
+h6 {
+    font-size: var(--text-size-h6);
+}
+
+p {
+    font-size: var(--text-size-p);
 }
 
 /* Utils */
 
+.flex {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex--column {
+    flex-direction: column;
+}
+
+.flex--row {
+    flex-direction: row;
+}
+
+.flex--justify-content-center {
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid--2-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-columns {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-columns {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Text */
+
+.bold {
+    font-weight: 600;
+}
+
+.light {
+    color: var(--text-color-light);
+}
+
+.small {
+    font-size: var(--text-size-small);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
 /* Components */
+
+.button {
+    padding: 0.75rem 2rem;
+    margin: 0 0.25rem;
+    cursor: pointer;
+}
+
+.button--primary {
+    border: 0;
+    background-color: var(--color-primary);
+    font-weight: 600;
+    color: white;
+    border-radius: 0.5rem;
+    font-size: var(--text-size-normal);
+    transition: background-color 0.3s;
+}
+
+.button--primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.card {
+    border-radius: 0.25rem;
+
+    overflow: hidden;
+    box-shadow: 1px 1px 3px 0 var(--shadow-color);
+    margin: 1rem;
+
+    transition: box-shadow 0.3s, margin 0.3s;
+}
+
+.card.clickable {
+    cursor: pointer;
+}
+
+.card.clickable:hover {
+    box-shadow: 3px 3px 12px 0 var(--shadow-color);
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card__image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.copyright {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    font-size: var(--text-size-small);
+    padding: 1rem;
+    text-align: center;
+}
+
+.destinations {
+}
+
+.destination {
+    position: relative; 
+    height: 15rem;   
+}
+
+.destination__image {
+
+}
+
+.destination__name {
+    font-size: 4rem;
+}
+
+.destination__text {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+
+    color:white;
+    text-shadow: 0.1rem 0.1rem 0 0 black;
+}
+
+.footer {
+    padding: 2rem;
+    background-color:#f9fafb /* #374151*/;
+    color: #6b7280;
+    border-top: solid 1px var(--border-color);
+}
+
+.footer ul {
+    list-style-type: none;
+}
+
+.footer li {
+    text-transform: capitalize;
+    padding-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.footer p {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.header {
+    padding: 1rem 5rem;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: var(--text-size-h6);
+    text-transform: uppercase;
+}
+
+.nav {
+    list-style-type: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--text-color-default);
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: var(--text-color-light);
+}
+
+.newsletter  {
+    background-image: url("/src/img/destinations/oman/oman.jpg");
+    background-position: 0 55%;
+    background-size: 100%;
+    padding: 2rem;
+    color: white;
+}
+
+.newsletter__wrapper {
+    background-color: rgba(2, 2, 2, 0.45);
+    border-radius: 1rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+.newsletter p {
+    margin-top: 1rem;
+}
+
+.newsletter__form {
+    margin-top: 2rem;
+}
+
+.newsletter input[type="email"] {
+    border: solid 1px var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: var(--text-size-normal);
+    width: 30rem;
+    margin-right: 1rem;
+}
+
+.offers {
+}
+
+.offer__image {
+    object-fit: cover;
+    width: 100%;
+    height: 10rem;
+}
+
+.offer__name {
+    padding: 1.25rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 6rem;
+}
+
+.offer_distances {
+    padding: 1.25rem;
+    border-bottom: solid 1px var(--border-color);
+    border-top: solid 1px var(--border-color);
+}
+
+.offer_distances>div p:first-child {
+    padding-bottom: 0.5rem;
+}
+
+.offer__destination {
+    padding: 1.25rem 0.75rem;
+}
+
+.offer__price {
+    padding: 1.25rem 0.75rem;
+    text-align: end;
+    border-top: solid 1px var(--border-color);
+    color: var(--color-primary);
+}
+
+.results {
+    display: none;
+
+    border: solid 1px dodgerblue;
+}
+
+.search {
+    border: solid 1px var(--border-color);
+    padding: 2rem 2rem;
+    margin-bottom: 9rem;
+
+    /* background-image: url("/src/img/destinations/oman/oman.jpg"); */
+    background-image: url("/src/img/common/italy.jpg");
+    background-position: 0 80%;
+    background-size: 100%;    
+    
+}
+
+.search__country {
+    font-size: var(--text-size-p);
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+
+.search__form {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.search__wrapper {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 3rem;
+    text-align: center;
+
+    position: relative;
+    top: 9rem;
+
+    background-color: rgba(2, 2, 2, 0.15);
+
+}
+
+.search__wrapper__text {
+    color: white;
+    text-align: left;
+}
+
+.search__wrapper__text h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+.search__wrapper__text p {
+    font-size: var(--text-size-h6);
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+select {
+    border: solid 1px var(--border-color);
+    border-radius: 0.5rem;
+    background: none;
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+}
+
+.section {
+    max-width: 1200px;
+    margin: 3rem auto;
+}
+
+.section__heading {
+    margin-bottom: 2rem;
+}
+
+.star {
+    color:   #facc15; 
+}
