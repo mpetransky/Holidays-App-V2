@@ -253,8 +253,8 @@ p {
 }
 
 .newsletter  {
-    background-image: url("/src/img/destinations/oman/oman.jpg");
-    background-position: 0 55%;
+    background-image: url("/img/common/beach4.jpg");
+    background-position: 0 95%;
     background-size: 100%;
     padding: 2rem;
     color: white;
@@ -332,9 +332,8 @@ p {
     padding: 2rem 2rem;
     margin-bottom: 9rem;
 
-    /* background-image: url("/src/img/destinations/oman/oman.jpg"); */
-    background-image: url("/src/img/common/italy.jpg");
-    background-position: 0 80%;
+    background-image: url("/img/common/beach5.jpg");
+    background-position: 0 50%;
     background-size: 100%;    
     
 }

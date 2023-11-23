@@ -26,7 +26,7 @@ class OffersView {
 
         return `
             <div class="offer card clickable">
-                <img class="offer__image" src="src/img/destinations/${randomImage}" alt="Hotel in Oman.">
+                <img class="offer__image" src="/img/destinations/${randomImage}" alt="Hotel in Oman.">
 
                 <h6 class="offer__name">${offer.name}<br><span class="star">${stars.get(offer.stars)}</span></h6>
                 

@@ -1,5 +1,5 @@
-import OffersModel from '/src/js/offers/offers-model.js';
-import OffersView from '/src/js/offers/offers-view.js';
+import OffersModel from '/js/offers/offers-model.js';
+import OffersView from '/js/offers/offers-view.js';
 
 class OffersController {
     constructor() {

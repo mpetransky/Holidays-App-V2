@@ -1,4 +1,4 @@
-import { hotels } from '/src/js/data.js';
+import { hotels } from '/js/data.js';
 
 class OffersModel {
 
